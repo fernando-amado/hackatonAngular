@@ -1,0 +1,20 @@
+<div class="page-header py-2 px-6">
+    <h6 class="color-text-primary">Administración de visitas y visitantes</h6>
+</div>
+<div class="p-4 row gap-3">
+    <mat-card class="col-3 p-0">
+        <mat-card-content class="gap-2 column">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Buscar visitante</mat-label>
+                <input type="text" placeholder="Pick one" aria-label="Number" matInput 
+                    [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            <button mat-stroked-button color="primary"><mat-icon >add</mat-icon> Agregar visitante</button>
+        </mat-card-content>
+    </mat-card>
+</div>
