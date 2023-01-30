@@ -1,0 +1,26 @@
+@use "@angular/material" as mat;
+//reposition of select component inside form field variants sizes
+mat-form-field{
+    &.small,&.medium{
+        .mat-mdc-select-arrow-wrapper{
+            height: auto !important;
+            transform: translateY(0px) !important; 
+        }
+    }
+    &.small{
+        & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+            .mat-mdc-select{
+              margin-top: .4rem;
+              line-height: 1.6rem;
+            }
+          }
+    }
+    &.medium{
+        & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+            .mat-mdc-select{
+              margin-top: .8rem;
+              line-height: 2rem;
+            }
+          }
+    }
+}

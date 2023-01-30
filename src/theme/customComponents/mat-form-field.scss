@@ -1,0 +1,53 @@
+@use "@angular/material" as mat;
+
+mat-form-field.small,mat-form-field.medium{
+  .mat-mdc-form-field-infix{
+    min-height: auto !important;
+  }
+  .mat-icon{
+      width: auto;
+      height: auto;
+      padding-inline:1.2rem;
+      padding-block: 0rem;
+      font-size: inherit !important;
+      text-align: center;
+      display: flex ;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .mat-mdc-floating-label{
+      top:50% !important;
+  }
+}
+mat-form-field.small {
+  & .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-small 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+      transform: translateY(calc(((($padding-vertical-small*2 ) + $line-height-small ) / 2) + 4px )*-1)scale(var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
+  }
+  }
+  //global configuration for all variants of form field
+  & .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: $line-height-small;
+  }
+}
+mat-form-field.medium {
+  & .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-medium 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+      transform: translateY(calc(((($padding-vertical-medium*2 ) + $line-height-medium ) / 2) + 4px )*-1) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
+  }
+  }
+  //global configuration for all variants of form field
+
+  & .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: $line-height-medium;
+  }
+}
+.mat-mdc-form-field-subscript-wrapper.display_none{
+  display: none !important;
+}

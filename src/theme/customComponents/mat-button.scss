@@ -1,0 +1,98 @@
+@use "@angular/material" as mat;
+//stroked buttons border color,stroked buttons and base buttons riple color
+.mdc-button {
+  &.mat-mdc-outlined-button {
+    &.mat-primary,
+    &.mat-accent,
+    &.mat-warn,
+    &.mat-success,
+    &.mat-info,
+    &.mat-warning {
+      border: 0.1rem solid;
+    }
+  }
+  &.mat-mdc-button,
+  &.mat-mdc-outlined-button {
+    &.mat-success:focus,
+    &.mat-success:hover {
+      --mat-mdc-button-persistent-ripple-color: #8fc93a;
+      --mat-mdc-button-ripple-color: rgb(143, 201, 58, 0.1);
+    }
+    &.mat-info:focus,
+    &.mat-info:hover {
+      --mat-mdc-button-persistent-ripple-color: #2d9fc5;
+      --mat-mdc-button-ripple-color: rgb(45, 159, 197, 0.1);
+    }
+    &.mat-warning:focus,
+    &.mat-warning:hover {
+      --mat-mdc-button-persistent-ripple-color: #fb8500;
+      --mat-mdc-button-ripple-color: rgb(251, 133, 0, 0.1);
+    }
+  }
+}
+//riased and flat buttons
+// .mdc-button {
+//   &.mat-mdc-button-base,
+//   &.mat-mdc-raised-button,
+//   &.mat-mdc-outlined-button,
+//   &.mat-mdc-unelevated-button,
+//   &.mat-mdc-fab {
+//     height: auto;
+//     padding: 10px 6px 10px 6px;
+//     @include mat.typography-level($typography-global-config, "button-small");
+//   }
+//   &.mat-mdc-unelevated-button,
+//   &.mat-mdc-raised-button {
+//     &.mat-accent,
+//     &.mat-success,
+//     &.mat-info,
+//     &.mat-warning {
+//       @include bg-color-config($white !important, null, null);
+//     }
+//   }
+// }
+//sizes button
+.mdc-button {
+  &.mat-mdc-button-base,
+  &.mat-mdc-raised-button,
+  &.mat-mdc-outlined-button,
+  &.mat-mdc-unelevated-button,
+  &.mat-mdc-fab {
+    // height: auto;
+    padding: 6px 10px !important;
+    font-size: 13px;
+    font-weight: 400;
+
+    // @include mat.typography-level($typography-global-config, "button-small" ) ;
+  }
+}
+.mdc-button {
+  &.medium {
+    &.mat-mdc-button-base,
+    &.mat-mdc-raised-button,
+    &.mat-mdc-outlined-button,
+    &.mat-mdc-unelevated-button,
+    &.mat-mdc-fab {
+    //   height: auto;
+      padding: 6px 16px 6px 16px !important;
+      font-size: 14px;
+      font-weight: 500;
+    //   @include mat.typography-level($typography-global-config, "button-small" ) ;-
+    }
+  }
+}
+.mdc-button {
+  &.large {
+    &.mat-mdc-button-base,
+    &.mat-mdc-raised-button,
+    &.mat-mdc-outlined-button,
+    &.mat-mdc-unelevated-button,
+    &.mat-mdc-fab {
+    //   height: auto;
+      padding: 22px 12px !important;
+      font-size: 15px;
+      font-weight: 500;
+      // @include mat.typography-level($typography-global-config, "button-large" );
+    }
+  }
+}
