@@ -1,20 +1,249 @@
 <div class="page-header py-2 px-6">
-    <h6 class="color-text-primary">Administración de visitas y visitantes</h6>
+  <h6 class="color-text-primary">Administración de visitas y visitantes</h6>
 </div>
 <div class="p-4 row gap-3">
-    <mat-card class="col-3 p-0">
-        <mat-card-content class="gap-2 column">
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Buscar visitante</mat-label>
-                <input type="text" placeholder="Pick one" aria-label="Number" matInput 
-                    [matAutocomplete]="auto">
-                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                        {{option}}
-                    </mat-option>
-                </mat-autocomplete>
-            </mat-form-field>
-            <button mat-stroked-button color="primary"><mat-icon >add</mat-icon> Agregar visitante</button>
-        </mat-card-content>
+  <mat-card class="col-3 p-0">
+    <mat-card-content class="gap-2 column">
+      <mat-form-field
+        size="small"
+        class="example-full-width"
+        appearance="outline"
+      >
+        <mat-label>Buscar visitante</mat-label>
+        <input
+          type="text"
+          placeholder="Pick one"
+          aria-label="Number"
+          matInput
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+          >
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" size="small">
+        <mat-icon>add</mat-icon> Agregar visitante
+      </button>
+      <div>
+        <mat-list>
+          <mat-list-item class="py-2 px-4">
+            <div class="row gap-3 align-items-center">
+              <mat-avatar
+                variant="circular"
+                nombre="Viviana Contreras"
+              ></mat-avatar>
+              <div class="py-1">
+                <p class="mat-body-1 color-text-primary">Viviana Contreras</p>
+                <p class="mat-body-1 color-text-secondary">
+                  Viviana.contraeras@sinco.com
+                </p>
+              </div>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div class="col-8 p-0">
+    <mat-card class="fondo">
+      <mat-card-content>
+        <div class="d-flex justify-content-between gap-3">
+          <div class="row gap-2 align-items-center">
+            <h6 class="color-text-primary">Viviana Contreras Torres</h6>
+            <mat-rating max="5"></mat-rating>
+          </div>
+          <div class="d-flex gap-2">
+            <button mat-button color="primary" size="small">
+              <mat-icon class="mat-icon-outlined">person</mat-icon> Ver mas
+              informacion
+            </button>
+            <div>
+              <button mat-button color="primary" size="small">
+                Abrir chat
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div class="d-flex gap-1">
+            <mat-icon class="mat-outlined color-text-disabled" size="small"
+              >phone_enabled</mat-icon
+            >
+            <p class="mat-body-2 color-text-primary">321 356 4789</p>
+          </div>
+          <div class="d-flex gap-1">
+            <mat-icon class="mat-icon-outlined color-text-disabled"
+              >assignment_ind</mat-icon
+            >
+            <p class="mat-body-2 color-text-primary">C.C 1.014.345.678</p>
+          </div>
+          <div class="d-flex gap-1">
+            <mat-icon class="mat-icon-outlined color-text-disabled"
+              >mail_outline</mat-icon
+            >
+            <p class="mat-body-2 color-text-primary">
+              Viviana.contreras@sinco.com.co
+            </p>
+          </div>
+        </div>
+      </mat-card-content>
     </mat-card>
+    <mat-card class="mt-7">
+      <mat-card-content class="column gap-1">
+        <div class="d-flex justify-content-between">
+          <mat-tab-group class="col-9 p-0">
+            <mat-tab label="Laureles Altos de l... APT-2-702"></mat-tab>
+            <mat-tab label="Laureles Altos de l... APT-2-702"></mat-tab>
+            <mat-tab label="Laureles Altos de l... APT-2-702"></mat-tab>
+          </mat-tab-group>
+          <button mat-button size="large" color="primary">
+            <mat-icon>add</mat-icon> Agregar visita
+          </button>
+        </div>
+        <div class="column gap-6">
+          <div class="column gap-2">
+            <div class="d-flex gap-3">
+              <div class="d-flex gap-2 align-items-end">
+                <p class="mat-subtitle-2 color-text-primary">
+                  Clasificacion de lead:
+                </p>
+                <mat-form-field appearance="outline" size="small">
+                  <mat-label>Favorite food</mat-label>
+                  <mat-select>
+                    <mat-option> </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="d-flex align-items-end gap-2">
+                <p class="mat-subtitle-2 color-text-primary">
+                  origen de informacion
+                </p>
+                <mat-icon class="color-text-primary">home</mat-icon>
+                <p class="mat-subtitle-2 color-text-primary">ERP</p>
+              </div>
+            </div>
+            <mat-card class="fondo-gris">
+              <mat-card-content class="column gap-1">
+                <div class="p-6 gap-2 column">
+                  <div class="d-flex gap-3">
+                    <mat-progress-bar
+                      class="col"
+                      mode="determinate"
+                      value="100"
+                    ></mat-progress-bar>
+                    <mat-progress-bar
+                      class="col"
+                      color="accent"
+                      mode="determinate"
+                      value="100"
+                    ></mat-progress-bar>
+                    <mat-progress-bar
+                      class="col"
+                      color="warning"
+                      mode="determinate"
+                      value="100"
+                    ></mat-progress-bar>
+                    <mat-progress-bar
+                      class="col"
+                      color=""
+                      mode="determinate"
+                      value="100"
+                    ></mat-progress-bar>
+                  </div>
+                  <div class="d-flex">
+                    <p class="mat-caption text-center col color-text-primary">
+                      Lead
+                    </p>
+                    <p class="mat-caption text-center col color-text-primary">
+                      Oportunidad
+                    </p>
+                    <p class="mat-caption text-center col color-text-primary">
+                      Prospecto
+                    </p>
+                    <p class="mat-caption text-center col color-text-primary">
+                      Comprador
+                    </p>
+                  </div>
+                  <div
+                    class="row justify-content-between align-item-center mt-4"
+                  >
+                    <div>
+                      <div class="d-flex gap-2">
+                        <p class="mat-subtitle-2 color-primary">Proyecto:</p>
+                        <p class="mat-body-1">Arbleda de chicala 2</p>
+                        <mat-rating max="5" class="px-3"></mat-rating>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <p class="mat-subtitle-2 color-text-secondary">
+                          Macroproyecto
+                        </p>
+                        <p class="mat-body-2 color-text-secondary">
+                          ARBOLEDA DE CHICALA 2
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="mat-body-2 color-text-primary">Disponible</p>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+            <div class="d-flex gap-2 justify-content-end">
+              <button mat-button size="small" color="primary">
+                <mat-icon>date_range</mat-icon> Reservar
+              </button>
+              <button mat-button size="small" color="primary">
+                <mat-icon>done</mat-icon> Autorizar reserva
+              </button>
+              <button mat-button size="small" color="primary">
+                <mat-icon>do_not_disturb</mat-icon> Oportunidad perdida
+              </button>
+              <button mat-button size="small" disabled>
+                <mat-icon>attach_money</mat-icon> Confirmar venta
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex column mt-4">
+          <div class="d-flex row gap-1">
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Fecha de visita</mat-label>
+              <input matInput placeholder="Fecha de visita">
+              <mat-icon matSuffix>date_range</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Ciudad de atención</mat-label>
+              <input matInput placeholder="Ciudad de atención">
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Proyecto</mat-label>
+              <input matInput placeholder="Proyecto">
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Unidad</mat-label>
+              <input matInput placeholder="Unidad">
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Unidad</mat-label>
+              <input matInput placeholder="Placeholder">
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Unidad</mat-label>
+              <input matInput placeholder="Placeholder">
+            </mat-form-field>
+            <mat-form-field appearance="outline" size="small">
+              <mat-label>Unidad</mat-label>
+              <input matInput placeholder="Placeholder">
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
