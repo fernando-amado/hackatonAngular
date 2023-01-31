@@ -1,0 +1,17 @@
+$variants-color: (
+    'text-primary' rgba(16, 24, 64, 0.87),
+    'text-secondary' rgba(16, 24, 64, 0.6),
+    'text-disabled' rgba(16, 24, 64, 0.38),
+    'primary' map-get($primary , 500 ),
+    'accent'  map-get($accent , 500 ),
+    'warn'  map-get($warn , 500 ),
+    'warning'  map-get($warning , 500 ),
+    'info'  map-get($info , 500 ),
+    'success'  map-get($success , 500 ),
+    );
+
+@each $clase, $color in $variants-color {
+  .color-#{$clase} {
+    color: $color;
+  }
+}

@@ -1,0 +1,31 @@
+mat-form-field{
+    &.small,&.medium{
+        .mat-mdc-icon-button{
+            width: auto !important;
+            height: auto !important;
+            display: flex;
+        }
+        .mat-mdc-icon-button .mat-mdc-button-touch-target{
+            height: auto !important;
+            width: auto !important;
+        }
+    }
+    &.small{
+        .mat-mdc-icon-button{
+            padding:calc($padding-vertical-small / 2) !important;
+        }
+        .mat-mdc-icon-button svg{
+            height: calc(((($padding-vertical-small*2 ) + $line-height-small ) / 2));
+            width: calc(((($padding-vertical-small*2 ) + $line-height-small ) / 2));
+        }
+    }
+    &.medium{
+        .mat-mdc-icon-button{
+            padding: calc($padding-vertical-medium /2 ) !important;
+        }
+        .mat-mdc-icon-button svg{
+            height: calc(((($padding-vertical-medium*2 ) + $line-height-medium ) / 2));
+            width: calc(((($padding-vertical-medium*2 ) + $line-height-medium ) / 2));
+        }
+    }
+}
